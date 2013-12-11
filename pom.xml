@@ -23,19 +23,12 @@
         <jetty.port>8080</jetty.port>
         <junit.version>4.11</junit.version>
         <lombok.version>1.12.2</lombok.version>
-        <spring.framework.version>4.0.0.RC2</spring.framework.version>
+        <spring.version>4.0.0.RC2</spring.version>
         <spring.security.version>3.1.4.RELEASE</spring.security.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.framework.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey</groupId>
                 <artifactId>jersey-bom</artifactId>

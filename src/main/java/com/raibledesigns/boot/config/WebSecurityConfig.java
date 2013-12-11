@@ -16,7 +16,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/", "/home").permitAll()
-                .antMatchers("/rest/**").hasRole("USER")
+                .antMatchers("/v1.0/**").hasRole("USER")
                 .anyRequest().authenticated();
         http.httpBasic().realmName("My API");
     }

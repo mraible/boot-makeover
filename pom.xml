@@ -23,7 +23,7 @@
         <jetty.port>8080</jetty.port>
         <junit.version>4.11</junit.version>
         <lombok.version>1.12.2</lombok.version>
-        <spring.version>4.0.0.RC2</spring.version>
+        <spring.version>4.0.0.RELEASE</spring.version>
         <spring.security.version>3.1.4.RELEASE</spring.security.version>
     </properties>
 

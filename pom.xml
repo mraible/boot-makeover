@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>0.5.0.M6</version>
+        <version>1.0.0.RC4</version>
     </parent>
 
     <properties>
@@ -23,7 +23,7 @@
         <jetty.port>8080</jetty.port>
         <junit.version>4.11</junit.version>
         <lombok.version>1.12.2</lombok.version>
-        <spring.version>4.0.0.RELEASE</spring.version>
+        <spring.version>4.0.2.RELEASE</spring.version>
         <spring.security.version>3.1.4.RELEASE</spring.security.version>
     </properties>
 
@@ -115,8 +115,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
             <plugin>

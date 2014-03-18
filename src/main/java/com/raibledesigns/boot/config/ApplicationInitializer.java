@@ -1,7 +1,10 @@
 package com.raibledesigns.boot.config;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.glassfish.jersey.servlet.ServletProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -15,6 +18,11 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @ComponentScan
 public class ApplicationInitializer extends SpringBootServletInitializer {
+
+    private Log log = LogFactory.getLog(ApplicationInitializer.class);
+
+    @Value("${outside.service.url}")
+    private String outsideServiceUrl;
 
     @Bean
     public ServletRegistrationBean jerseyServlet() {
@@ -30,5 +38,11 @@ public class ApplicationInitializer extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(ApplicationInitializer.class, args);
+    }
+
+    @Bean
+    public String showOutsideServiceUrl() {
+        log.info("Outside Service Url: " + outsideServiceUrl);
+        return outsideServiceUrl;
     }
 }
